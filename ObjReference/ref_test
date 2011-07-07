@@ -1,0 +1,472 @@
+	.file	"ref_test.cpp"
+	.text
+	.p2align 2,,3
+	.def	___tcf_0;	.scl	3;	.type	32;	.endef
+___tcf_0:
+LFB999:
+	pushl	%ebp
+LCFI0:
+	movl	%esp, %ebp
+LCFI1:
+	subl	$24, %esp
+LCFI2:
+	movl	$__ZStL8__ioinit, (%esp)
+	call	__ZNSt8ios_base4InitD1Ev
+	leave
+LCFI3:
+	ret
+LFE999:
+	.align 2
+	.p2align 2,,3
+.globl __ZN10SomeObject10Operation1Ev
+	.def	__ZN10SomeObject10Operation1Ev;	.scl	2;	.type	32;	.endef
+__ZN10SomeObject10Operation1Ev:
+LFB980:
+	pushl	%ebp
+LCFI4:
+	movl	%esp, %ebp
+LCFI5:
+	addl	$99, _dummy
+	leave
+LCFI6:
+	ret
+LFE980:
+	.align 2
+	.p2align 2,,3
+.globl __ZN10SomeObject10Operation2Ev
+	.def	__ZN10SomeObject10Operation2Ev;	.scl	2;	.type	32;	.endef
+__ZN10SomeObject10Operation2Ev:
+LFB981:
+	pushl	%ebp
+LCFI7:
+	movl	%esp, %ebp
+LCFI8:
+	addl	$99, _dummy
+	leave
+LCFI9:
+	ret
+LFE981:
+	.align 2
+	.p2align 2,,3
+.globl __ZN10SomeObject10Operation3Ev
+	.def	__ZN10SomeObject10Operation3Ev;	.scl	2;	.type	32;	.endef
+__ZN10SomeObject10Operation3Ev:
+LFB982:
+	pushl	%ebp
+LCFI10:
+	movl	%esp, %ebp
+LCFI11:
+	addl	$99, _dummy
+	leave
+LCFI12:
+	ret
+LFE982:
+	.align 2
+	.p2align 2,,3
+.globl __ZN10SomeObject10Operation4Ev
+	.def	__ZN10SomeObject10Operation4Ev;	.scl	2;	.type	32;	.endef
+__ZN10SomeObject10Operation4Ev:
+LFB983:
+	pushl	%ebp
+LCFI13:
+	movl	%esp, %ebp
+LCFI14:
+	addl	$99, _dummy
+	leave
+LCFI15:
+	ret
+LFE983:
+	.align 2
+	.p2align 2,,3
+.globl __ZN10SomeObject10Operation5Ev
+	.def	__ZN10SomeObject10Operation5Ev;	.scl	2;	.type	32;	.endef
+__ZN10SomeObject10Operation5Ev:
+LFB984:
+	pushl	%ebp
+LCFI16:
+	movl	%esp, %ebp
+LCFI17:
+	addl	$99, _dummy
+	leave
+LCFI18:
+	ret
+LFE984:
+	.align 2
+	.p2align 2,,3
+.globl __ZN10SomeObject10Operation6Ev
+	.def	__ZN10SomeObject10Operation6Ev;	.scl	2;	.type	32;	.endef
+__ZN10SomeObject10Operation6Ev:
+LFB985:
+	pushl	%ebp
+LCFI19:
+	movl	%esp, %ebp
+LCFI20:
+	addl	$99, _dummy
+	leave
+LCFI21:
+	ret
+LFE985:
+	.p2align 2,,3
+.globl __Z4Foo1PP10SomeObjectj
+	.def	__Z4Foo1PP10SomeObjectj;	.scl	2;	.type	32;	.endef
+__Z4Foo1PP10SomeObjectj:
+LFB986:
+	pushl	%ebp
+LCFI22:
+	movl	%esp, %ebp
+LCFI23:
+	movl	12(%ebp), %eax
+	testl	%eax, %eax
+	je	L8
+	imull	$594, %eax, %eax
+	addl	%eax, _dummy
+L8:
+	leave
+LCFI24:
+	ret
+LFE986:
+	.p2align 2,,3
+.globl __Z4Foo2PP10SomeObjectj
+	.def	__Z4Foo2PP10SomeObjectj;	.scl	2;	.type	32;	.endef
+__Z4Foo2PP10SomeObjectj:
+LFB987:
+	pushl	%ebp
+LCFI25:
+	movl	%esp, %ebp
+LCFI26:
+	movl	12(%ebp), %eax
+	testl	%eax, %eax
+	je	L12
+	imull	$594, %eax, %eax
+	addl	%eax, _dummy
+L12:
+	leave
+LCFI27:
+	ret
+LFE987:
+	.def	___main;	.scl	2;	.type	32;	.endef
+	.section .rdata,"dr"
+LC0:
+	.ascii "Foo1: \0"
+LC1:
+	.ascii "Foo2: \0"
+	.text
+	.p2align 2,,3
+.globl _main
+	.def	_main;	.scl	2;	.type	32;	.endef
+_main:
+LFB988:
+	pushl	%ebp
+LCFI28:
+	movl	%esp, %ebp
+LCFI29:
+	andl	$-16, %esp
+LCFI30:
+	pushl	%edi
+LCFI31:
+	pushl	%esi
+LCFI32:
+	pushl	%ebx
+LCFI33:
+	subl	$420, %esp
+LCFI34:
+	call	___main
+	xorl	%ebx, %ebx
+	leal	16(%esp), %esi
+	.p2align 2,,3
+L16:
+	movl	$1, (%esp)
+	call	__Znwj
+	movl	%eax, (%esi,%ebx,4)
+	incl	%ebx
+	cmpl	$100, %ebx
+	jne	L16
+	call	_clock
+	movl	%eax, %ebx
+	movl	$100000, %edi
+	.p2align 2,,3
+L17:
+	movl	$100, 4(%esp)
+	movl	%esi, (%esp)
+	call	__Z4Foo1PP10SomeObjectj
+	decl	%edi
+	jne	L17
+	call	_clock
+	movl	%eax, %edi
+	movl	$6, 8(%esp)
+	movl	$LC0, 4(%esp)
+	movl	$__ZSt4cout, (%esp)
+	call	__ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_i
+	subl	%ebx, %edi
+	movl	%edi, 4(%esp)
+	movl	$__ZSt4cout, (%esp)
+	call	__ZNSo9_M_insertIlEERSoT_
+	movl	%eax, %ebx
+	movl	(%eax), %eax
+	movl	-12(%eax), %eax
+	movl	124(%ebx,%eax), %edi
+	testl	%edi, %edi
+	je	L30
+	cmpb	$0, 28(%edi)
+	je	L19
+	movb	39(%edi), %al
+L20:
+	movsbl	%al, %eax
+	movl	%eax, 4(%esp)
+	movl	%ebx, (%esp)
+	call	__ZNSo3putEc
+	movl	%eax, (%esp)
+	call	__ZNSo5flushEv
+	call	_clock
+	movl	%eax, %ebx
+	xorl	%edi, %edi
+	.p2align 2,,3
+L21:
+	movl	$100, 4(%esp)
+	movl	%esi, (%esp)
+	call	__Z4Foo2PP10SomeObjectj
+	incl	%edi
+	cmpl	$100000, %edi
+	jne	L21
+	call	_clock
+	movl	%eax, %edi
+	movl	$6, 8(%esp)
+	movl	$LC1, 4(%esp)
+	movl	$__ZSt4cout, (%esp)
+	call	__ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_i
+	subl	%ebx, %edi
+	movl	%edi, 4(%esp)
+	movl	$__ZSt4cout, (%esp)
+	call	__ZNSo9_M_insertIlEERSoT_
+	movl	%eax, %ebx
+	movl	(%eax), %eax
+	movl	-12(%eax), %eax
+	movl	124(%ebx,%eax), %edi
+	testl	%edi, %edi
+	je	L30
+	cmpb	$0, 28(%edi)
+	je	L23
+	movb	39(%edi), %al
+L24:
+	movsbl	%al, %eax
+	movl	%eax, 4(%esp)
+	movl	%ebx, (%esp)
+	call	__ZNSo3putEc
+	movl	%eax, (%esp)
+	call	__ZNSo5flushEv
+	xorl	%ebx, %ebx
+	.p2align 2,,3
+L25:
+	movl	(%esi,%ebx,4), %eax
+	movl	%eax, (%esp)
+	call	__ZdlPv
+	incl	%ebx
+	cmpl	$100, %ebx
+	jne	L25
+	xorl	%eax, %eax
+	addl	$420, %esp
+	popl	%ebx
+LCFI35:
+	popl	%esi
+LCFI36:
+	popl	%edi
+LCFI37:
+	leave
+LCFI38:
+	ret
+L19:
+LCFI39:
+	movl	%edi, (%esp)
+	call	__ZNKSt5ctypeIcE13_M_widen_initEv
+	movl	(%edi), %eax
+	movl	$10, 4(%esp)
+	movl	%edi, (%esp)
+	call	*24(%eax)
+	jmp	L20
+L23:
+	movl	%edi, (%esp)
+	call	__ZNKSt5ctypeIcE13_M_widen_initEv
+	movl	(%edi), %eax
+	movl	$10, 4(%esp)
+	movl	%edi, (%esp)
+	call	*24(%eax)
+	jmp	L24
+L30:
+	call	__ZSt16__throw_bad_castv
+LFE988:
+	.p2align 2,,3
+	.def	__GLOBAL__I_dummy;	.scl	3;	.type	32;	.endef
+__GLOBAL__I_dummy:
+LFB1000:
+	pushl	%ebp
+LCFI40:
+	movl	%esp, %ebp
+LCFI41:
+	subl	$24, %esp
+LCFI42:
+	movl	$__ZStL8__ioinit, (%esp)
+	call	__ZNSt8ios_base4InitC1Ev
+	movl	$___tcf_0, (%esp)
+	call	_atexit
+	leave
+LCFI43:
+	ret
+LFE1000:
+	.section	.ctors,"w"
+	.align 4
+	.long	__GLOBAL__I_dummy
+.globl _dummy
+	.bss
+	.align 4
+_dummy:
+	.space 4
+.lcomm __ZStL8__ioinit,1,1
+	.section	.eh_frame,"w"
+Lframe1:
+	.long	LECIE1-LSCIE1
+LSCIE1:
+	.long	0x0
+	.byte	0x1
+	.ascii "\0"
+	.uleb128 0x1
+	.sleb128 -4
+	.byte	0x8
+	.byte	0xc
+	.uleb128 0x4
+	.uleb128 0x4
+	.byte	0x88
+	.uleb128 0x1
+	.align 4
+LECIE1:
+LSFDE1:
+	.long	LEFDE1-LASFDE1
+LASFDE1:
+	.long	LASFDE1-Lframe1
+	.long	LFB999
+	.long	LFE999-LFB999
+	.byte	0x4
+	.long	LCFI0-LFB999
+	.byte	0xe
+	.uleb128 0x8
+	.byte	0x85
+	.uleb128 0x2
+	.byte	0x4
+	.long	LCFI1-LCFI0
+	.byte	0xd
+	.uleb128 0x5
+	.byte	0x4
+	.long	LCFI3-LCFI1
+	.byte	0xc5
+	.byte	0xc
+	.uleb128 0x4
+	.uleb128 0x4
+	.align 4
+LEFDE1:
+LSFDE3:
+	.long	LEFDE3-LASFDE3
+LASFDE3:
+	.long	LASFDE3-Lframe1
+	.long	LFB988
+	.long	LFE988-LFB988
+	.byte	0x4
+	.long	LCFI28-LFB988
+	.byte	0xe
+	.uleb128 0x8
+	.byte	0x85
+	.uleb128 0x2
+	.byte	0x4
+	.long	LCFI29-LCFI28
+	.byte	0xd
+	.uleb128 0x5
+	.byte	0x4
+	.long	LCFI34-LCFI29
+	.byte	0x10
+	.byte	0x3
+	.uleb128 0x8
+	.byte	0x75
+	.sleb128 0
+	.byte	0x9
+	.byte	0xf0
+	.byte	0x1a
+	.byte	0x9
+	.byte	0xf4
+	.byte	0x22
+	.byte	0x10
+	.byte	0x6
+	.uleb128 0x8
+	.byte	0x75
+	.sleb128 0
+	.byte	0x9
+	.byte	0xf0
+	.byte	0x1a
+	.byte	0x9
+	.byte	0xf8
+	.byte	0x22
+	.byte	0x10
+	.byte	0x7
+	.uleb128 0x8
+	.byte	0x75
+	.sleb128 0
+	.byte	0x9
+	.byte	0xf0
+	.byte	0x1a
+	.byte	0x9
+	.byte	0xfc
+	.byte	0x22
+	.byte	0x4
+	.long	LCFI35-LCFI34
+	.byte	0xa
+	.byte	0xc3
+	.byte	0x4
+	.long	LCFI36-LCFI35
+	.byte	0xc6
+	.byte	0x4
+	.long	LCFI37-LCFI36
+	.byte	0xc7
+	.byte	0x4
+	.long	LCFI38-LCFI37
+	.byte	0xc5
+	.byte	0xc
+	.uleb128 0x4
+	.uleb128 0x4
+	.byte	0x4
+	.long	LCFI39-LCFI38
+	.byte	0xb
+	.align 4
+LEFDE3:
+LSFDE5:
+	.long	LEFDE5-LASFDE5
+LASFDE5:
+	.long	LASFDE5-Lframe1
+	.long	LFB1000
+	.long	LFE1000-LFB1000
+	.byte	0x4
+	.long	LCFI40-LFB1000
+	.byte	0xe
+	.uleb128 0x8
+	.byte	0x85
+	.uleb128 0x2
+	.byte	0x4
+	.long	LCFI41-LCFI40
+	.byte	0xd
+	.uleb128 0x5
+	.byte	0x4
+	.long	LCFI43-LCFI41
+	.byte	0xc5
+	.byte	0xc
+	.uleb128 0x4
+	.uleb128 0x4
+	.align 4
+LEFDE5:
+	.def	__ZNSt8ios_base4InitD1Ev;	.scl	2;	.type	32;	.endef
+	.def	__Znwj;	.scl	2;	.type	32;	.endef
+	.def	_clock;	.scl	2;	.type	32;	.endef
+	.def	__ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_i;	.scl	2;	.type	32;	.endef
+	.def	__ZNSo9_M_insertIlEERSoT_;	.scl	2;	.type	32;	.endef
+	.def	__ZNSo3putEc;	.scl	2;	.type	32;	.endef
+	.def	__ZNSo5flushEv;	.scl	2;	.type	32;	.endef
+	.def	__ZdlPv;	.scl	2;	.type	32;	.endef
+	.def	__ZNKSt5ctypeIcE13_M_widen_initEv;	.scl	2;	.type	32;	.endef
+	.def	__ZSt16__throw_bad_castv;	.scl	2;	.type	32;	.endef
+	.def	__ZNSt8ios_base4InitC1Ev;	.scl	2;	.type	32;	.endef
+	.def	_atexit;	.scl	2;	.type	32;	.endef
