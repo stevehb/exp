@@ -1,5 +1,4 @@
 import java.util.zip.InflaterInputStream;
-
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
@@ -32,12 +31,14 @@ class SwfDecompressor {
             fis.close();
 
             FileOutputStream fos = new FileOutputStream("decomp_" + args[0]);
+            header[0] = 'F';
             fos.write(header);
             for(Byte b : data) {
                 fos.write(b);
             }
             fos.close();
-
+            System.out.println("wrote " + (header.length + data.size()) + 
+                               " bytes to decomp_" + args[0]);
         } catch(Exception e) {
             e.printStackTrace();
         }
