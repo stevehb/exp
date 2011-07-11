@@ -43,8 +43,8 @@ App.update = function(ev) {
     App.dest.y = y;
 
     // update distance calc
-    App.dx = App.dist.x - App.src.x;
-    App.dy = App.dist.y - App.src.y;
+    App.dx = App.dest.x - App.src.x;
+    App.dy = App.dest.y - App.src.y;
     App.dist = Math.sqrt((App.dx * App.dx) + (App.dy * App.dy));
 
 
@@ -60,6 +60,6 @@ App.update = function(ev) {
     // draw the text
     App.c.fillStyle = "#FFF";
     App.c.fillText("src=(" + App.src.x + "," + App.src.y + "), dest=(" + 
-                   App.dest.x + "," + App.dest.y + "), dist=" + App.dist +
-                   ", dx=" + App.dx + ", dy=" + App.dy, 1, App.canvas.height);
+                   App.dest.x + "," + App.dest.y + "), dist=" + App.dist,
+                   1, App.canvas.height);
 };
