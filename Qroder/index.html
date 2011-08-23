@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Qroder</title>
+    <script>
+      function reset() {
+          var url = document.location.href;
+          document.getElementById("inputText").value = url;
+          document.getElementById("inputWidth").value = 200;
+          document.getElementById("inputHeight").value = 200;
+          updateQrCode();
+      }
+      function updateQrCode() {
+          var txt = document.getElementById("inputText").value;
+          var w = document.getElementById("inputWidth").value;
+          var h = document.getElementById("inputHeight").value;
+          var srcUrl = "https://chart.googleapis.com/chart?chs=" + w + "x" + h + "&cht=qr&chl=" + txt;
+          document.getElementById("qrImage").src = srcUrl;
+      }
+    </script>
+  </head>
+  <body onload="reset()">
+    <h2>Qroder</h2>
+    <p>Enter the text to encode below and press submit.</p>
+    <form>
+      <input type="text" id="inputText" style="width:450px;" /><br />
+      Width: <input type="text" id="inputWidth" /> Height: <input type="text" id="inputHeight" /><br />
+      <input type="button" value="Submit" onclick="updateQrCode()" />
+      <input type="button" value="Reset" onclick="reset()" />
+    </form>
+    <img id="qrImage" alt="QR Code" src="" />
+  </body>
+</html>
