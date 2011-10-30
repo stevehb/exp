@@ -1,5 +1,3 @@
-
-
 /* AspectFitter finds the smallest rectangle with ASPECT_RATIO
  * proportions that will fit inside of the given dimensions.
  */
