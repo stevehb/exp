@@ -17,7 +17,7 @@ public class RegExScanner {
 
         System.out.println("target=" + target);
         System.out.println("regex=" + regex);
-        System.out.println("matches()=" + matcher.matches());
+        System.out.println("find()=" + matcher.find());
     }
 }
 
