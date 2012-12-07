@@ -1,0 +1,33 @@
+<html>
+<head>
+    <link rel="stylesheet" href="crossdomain.xml" />
+    <!--
+    <link rel="stylesheet" href="http://serverapi.arcgisonline.com/crossdomain.xml" />
+    <link href="crossdomain2.xml" />
+    -->
+
+</head>
+<body>
+
+    <h4>This is h4 content.</h4>
+
+    <script>
+    var l;
+    l = document.createElement('link');
+    l.setAttribute('href', 'http://serverapi.arcgisonline.com/crossdomain.xml');
+    l.setAttribute('rel', 'stylesheet');
+    l.setAttribute('id', 'xml');
+    document.head.appendChild(l);
+
+    l = document.createElement('link');
+    l.setAttribute('href', 'crossdomain2.xml');
+    l.setAttribute('rel', 'stylesheet');
+    l.setAttribute('id', 'xml');
+    document.head.appendChild(l);
+
+    </script>
+
+
+</body>
+
+</html>
