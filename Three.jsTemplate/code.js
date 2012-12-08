@@ -11,6 +11,8 @@ THREE.Object3D.prototype.clear = function(){
 var scene, camera, renderer, stats;
 var lastTime, currentTime, elapsed;
 var sphereGeom, sphereMat, sphereMesh;
+var redLight, redLightGeom, redLightMat, redLightMesh;
+var blueLight, blueLightGeom, blueLightMat, blueLightMesh;
 
 $(document).ready(function() {
 
@@ -18,7 +20,7 @@ $(document).ready(function() {
 
   var aspectRatio = $(window).width() / $(window).height();
   camera = new THREE.PerspectiveCamera(55, aspectRatio, 1, 1000);
-  camera.position.copy(new THREE.Vector3(0, 0, 50));
+  camera.position.copy(new THREE.Vector3(0, 0, 100));
   camera.lookAt(new THREE.Vector3(0, 0, 0));
 
   renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -32,12 +34,23 @@ $(document).ready(function() {
   sphereMesh = new THREE.Mesh(sphereGeom, sphereMat);
   scene.add(sphereMesh);
 
-  var light = new THREE.PointLight(0xcc0000);
-  light.position.set(0, 50, 0);
-  scene.add(light);
-  light = new THREE.PointLight(0x0000cc);
-  light.position.set(0, -50, 0);
-  scene.add(light);
+  redLight = new THREE.PointLight(0xff0000);
+  redLight.position.set(0, 35, 0);
+  scene.add(redLight);
+  redLightGeom = new THREE.SphereGeometry(2, 4, 4);
+  redLightMat = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+  redLightMesh = new THREE.Mesh(redLightGeom, redLightMat);
+  redLightMesh.position.y = 35;
+  scene.add(redLightMesh);
+
+  blueLight = new THREE.PointLight(0x0000ff);
+  blueLight.position.set(0, -35, 0);
+  scene.add(blueLight);
+  blueLightGeom = new THREE.SphereGeometry(2, 4, 4);
+  blueLightMat = new THREE.MeshBasicMaterial({ color: 0x0000ff });
+  blueLightMesh = new THREE.Mesh(blueLightGeom, blueLightMat);
+  blueLightMesh.position.y = -35;
+  scene.add(blueLightMesh);
 
   // handle window resizing
   $(window).resize(function(evt) {
@@ -68,10 +81,8 @@ var update = function() {
   if(keyboard.pressed('up')) { camera.position.y += 5; }
   if(keyboard.pressed('down')) { camera.position.y -= 5; }
 
-  sphereMesh.scale.x = Math.cos(currentTime * 0.001); 
-  sphereMesh.scale.y = Math.cos(currentTime * 0.001); 
-  sphereMesh.scale.z = Math.cos(currentTime * 0.001); 
-
+  var scaleMultiplier = Math.abs(Math.cos(currentTime * 0.001));
+  sphereMesh.scale.set(scaleMultiplier, scaleMultiplier, scaleMultiplier);
 
   // update game and render
   renderer.render(scene, camera);
