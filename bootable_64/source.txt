@@ -1,0 +1,1 @@
+http://davidad.github.io/blog/2014/02/18/kernel-from-scratch/
